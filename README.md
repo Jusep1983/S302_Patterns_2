@@ -12,15 +12,17 @@ En esta práctica profundizaremos en los patrones de diseño **Builder**, **Obse
 <details>
 <summary>🔹 Nivel 1 – Builder (clic para ver el enunciado completo)</summary>
 
-    Desarrolla un sistema de gestión de pedidos de pizzas utilizando el patrón _Builder_ en Java. El sistema ha de permitir la creación 
-    de diferentes tipos de pizzas con configuraciones de tamaño, masa e ingredientes distintos.
+    Desarrolla un sistema de gestión de pedidos de pizzas utilizando el patrón _Builder_ en Java. 
+    El sistema ha de permitir la creación de diferentes tipos de pizzas con configuraciones de tamaño, 
+    masa e ingredientes distintos.
     
     1. Define una clase `Pizza` con los siguientes atributos:
        - `size` (tamaño)
        - `dough` (tipo de masa)
        - `toppings` (ingredientes)
     2. Crea una interfaz `PizzaBuilder` con el método `Pizza build()`.
-    3. Implementa builders concretos (por ejemplo: `MediumHawaiianPizzaBuilder`, `LargeVeganPizzaBuilder`, `SmallPepperoniPizzaBuilder`).
+    3. Implementa builders concretos (por ejemplo: `MediumHawaiianPizzaBuilder`, `LargeVeganPizzaBuilder`,
+    `SmallPepperoniPizzaBuilder`).
     4. Desarrolla una clase `MestrePizzer` que reciba un `PizzaBuilder` y llame a `build()`.
     5. En la clase `Main`, instancia varios builders y usa `MestrePizzer` para construir y mostrar las pizzas.
 
