@@ -72,10 +72,8 @@ Simula una pasarela de pago que reciba un objeto que implemente `PaymentMethod` 
 - Desde la terminal situate en la carpeta que desees clonarlo (por ejemplo: cd S302_Patterns_2) y ejecuta el comando git clone
   
 ```bash
-      cd S302_Patterns_2
-
       git clone https://github.com/Jusep1983/S302_Patterns_2.git
-      
+      cd S302_Patterns_2
 ```
 
 ### Importar en IntelliJ IDEA
@@ -96,13 +94,13 @@ O bien, ejecutando la clase Main directamente desde IntelliJ IDEA.
 
 ## 🌐 Estructura de Paquetes
 
-level1.builders         Patrón Builder
-level2.observers        Patrón Observer: interfaces y brokers
-level2.subjects         Patrón Observer: stock exchange
-level3.model            Modelo de dominio para compras y clientes
-level3.payment          Interfaz PaymentMethod y métodos de pago
-level3.payment.gateway  Pasarela de pago
-level3.payment.methods  Implementaciones de métodos de pago
+    level1.builders --------> Patrón Builder
+    level2.observers -------> Patrón Observer: interfaces y brokers
+    level2.subjects --------> Patrón Observer: stock exchange
+    level3.model -----------> Modelo de dominio para compras y clientes
+    level3.payment ---------> Interfaz PaymentMethod y métodos de pago
+    level3.payment.gateway -> Pasarela de pago
+    level3.payment.methods -> Implementaciones de métodos de pago
 
 ## 🤝 Contribuciones
 
