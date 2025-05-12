@@ -10,11 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        PizzaMaster pizzer = new PizzaMaster();
+        PizzaMaster pizzaiolo = new PizzaMaster();
 
-        Pizza pepperoniPizza = pizzer.makePizza(new SmallPepperoniPizzaBuilder());
-        Pizza hawaiianPizza = pizzer.makePizza(new MediumHawaiianPizzaBuilder());
-        Pizza veganPizza = pizzer.makePizza(new LargeVeganPizzaBuilder());
+        Pizza pepperoniPizza = pizzaiolo.makePizza(new SmallPepperoniPizzaBuilder());
+        Pizza hawaiianPizza = pizzaiolo.makePizza(new MediumHawaiianPizzaBuilder());
+        Pizza veganPizza = pizzaiolo.makePizza(new LargeVeganPizzaBuilder());
 
         System.out.println(pepperoniPizza);
         System.out.println(hawaiianPizza);
