@@ -8,7 +8,11 @@ public enum PizzaTopping {
     MUSHROOMS("Sliced fresh mushrooms"),
     PINEAPPLE("Sweet pineapple chunks"),
     VEGAN_CHEESE("Plant-based mozzarella-style cheese"),
-    EGGPLANT("Oven-roasted eggplant slices");
+    EGGPLANT("Oven-roasted eggplant slices"),
+    TOFU_CRUMBLE("Seasoned tofu as meat substitute"),
+    BLACK_OLIVES("Kalamata olives sliced"),
+    ROASTED_RED_PEPPERS("Fire-roasted red pepper strips"),
+    GREEN_PESTO("Green pesto");
 
     private final String description;
 

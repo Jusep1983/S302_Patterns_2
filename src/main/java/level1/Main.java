@@ -1,10 +1,12 @@
 package level1;
 
-import level1.builders.LargeVeganPizzaBuilder;
-import level1.builders.MediumHawaiianPizzaBuilder;
+import level1.builders.VeganPizzaBuilder;
+import level1.builders.HawaiianPizzaBuilder;
 import level1.director.PizzaMaster;
-import level1.builders.SmallPepperoniPizzaBuilder;
+import level1.builders.PepperoniPizzaBuilder;
 import level1.model.Pizza;
+import level1.model.enums.PizzaDough;
+import level1.model.enums.PizzaSize;
 
 public class Main {
 
@@ -12,13 +14,21 @@ public class Main {
 
         PizzaMaster pizzaiolo = new PizzaMaster();
 
-        Pizza pepperoniPizza = pizzaiolo.makePizza(new SmallPepperoniPizzaBuilder());
-        Pizza hawaiianPizza = pizzaiolo.makePizza(new MediumHawaiianPizzaBuilder());
-        Pizza veganPizza = pizzaiolo.makePizza(new LargeVeganPizzaBuilder());
+        Pizza smallPepperoniPizza = pizzaiolo.makePizza(
+                new PepperoniPizzaBuilder(), PizzaSize.SMALL, PizzaDough.THIN_DOUGH
+        );
+        
+        Pizza mediumHawaiianPizza = pizzaiolo.makePizza(
+                new HawaiianPizzaBuilder(), PizzaSize.MEDIUM, PizzaDough.CLASSIC_DOUGH
+        );
 
-        System.out.println(pepperoniPizza);
-        System.out.println(hawaiianPizza);
-        System.out.println(veganPizza);
+        Pizza largeVeganPizza = pizzaiolo.makePizza(
+                new VeganPizzaBuilder(), PizzaSize.LARGE, PizzaDough.THICK_DOUGH
+        );
+
+        System.out.println(smallPepperoniPizza);
+        System.out.println(mediumHawaiianPizza);
+        System.out.println(largeVeganPizza);
 
     }
 

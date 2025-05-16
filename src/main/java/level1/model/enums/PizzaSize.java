@@ -1,18 +1,18 @@
 package level1.model.enums;
 
 public enum PizzaSize {
-    SMALL("20cm"),
-    MEDIUM("30cm"),
-    LARGE("40cm");
+    SMALL("small"),
+    MEDIUM("medium"),
+    LARGE("large");
 
-    private final String cm;
+    private final String size;
 
-    PizzaSize(String cm) {
-        this.cm = cm;
+    PizzaSize(String size) {
+        this.size = size;
     }
 
-    public String getCm() {
-        return cm;
+    public String getSize() {
+        return size;
     }
 
 }

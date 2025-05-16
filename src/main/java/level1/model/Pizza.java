@@ -23,8 +23,8 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return this.name + "\n" +
-               "Size: " + this.size.getCm() + "\n" +
+        return "Name: " + this.name + "\n" +
+               "Size: " + this.size.getSize() + "\n" +
                "Dough: " + this.dough.getDescription() + "\n" +
                "Toppings: " + this.toppings + "\n";
     }

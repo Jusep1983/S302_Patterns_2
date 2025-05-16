@@ -36,6 +36,7 @@ public class ConcreteStockExchange implements StockExchange {
         System.out.println(indexName + " updated to " + lastValue
                            + " (" + ChangeSymbolFormatter.changeSymbol(percentageChange) + percentageChange + "%)\n"
         );
+        //this.brokers.forEach(broker ->broker.update(indexName, lastValue, percentageChange));
         for (Broker broker : this.brokers) {
             broker.update(indexName, lastValue, percentageChange);
         }

@@ -1,9 +1,9 @@
 package level1.model.enums;
 
 public enum PizzaDough {
-    THIN_DOUGH("Thin and crispy crust, Italian-style"),
-    THICK_DOUGH("Thick and chewy deep-dish style"),
-    CLASSIC_DOUGH("Traditional hand-tossed dough");
+    THIN_DOUGH("thin dough"),
+    THICK_DOUGH("thick dough"),
+    CLASSIC_DOUGH("classic dough");
 
     private final String description;
 
