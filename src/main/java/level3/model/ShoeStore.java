@@ -11,11 +11,12 @@ import java.util.List;
  */
 public class ShoeStore {
     private final PaymentGateway paymentGateway = new PaymentGateway();
-    private List<Customer> customers;
-    private List<Shoe> stockShoes;
+    private final List<Customer> customers;
+    private final List<Shoe> stockShoes;
 
     public ShoeStore() {
         this.customers = new ArrayList<>();
+        this.stockShoes = new ArrayList<>();
     }
 
     public void sellShoes(Customer customer, Purchase purchase) {

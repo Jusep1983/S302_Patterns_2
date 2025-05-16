@@ -10,8 +10,8 @@ import java.util.List;
 public class Customer {
     private static int idCustomerCounter = 0;
     private final int idCustomer;
-    private String name;
-    private List<Purchase> purchases;
+    private final String name;
+    private final List<Purchase> purchases;
 
     public Customer(String name) {
         this.idCustomer = ++idCustomerCounter;
