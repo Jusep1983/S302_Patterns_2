@@ -10,10 +10,22 @@ public class PizzaMaster {
     public PizzaMaster() {
     }
 
-    public Pizza makePizza(PizzaBuilder pizzaBuilder, PizzaSize size, PizzaDough dough) {
-        pizzaBuilder.setSize(size);
-        pizzaBuilder.setDough(dough);
-        return pizzaBuilder.build();
+    public Pizza makeSmallHawaiianPizzaWithThinDough (PizzaBuilder HawaiianPizzaBuilder){
+        HawaiianPizzaBuilder.setSize(PizzaSize.SMALL);
+        HawaiianPizzaBuilder.setDough(PizzaDough.THIN_DOUGH);
+        return HawaiianPizzaBuilder.build();
+    }
+
+    public Pizza makeMediumPepperoniPizzaWithThickDough(PizzaBuilder PepperoniPizzaBuilder ){
+        PepperoniPizzaBuilder.setSize(PizzaSize.MEDIUM);
+        PepperoniPizzaBuilder.setDough(PizzaDough.THICK_DOUGH);
+        return PepperoniPizzaBuilder.build();
+    }
+
+    public Pizza makeLargeVeganPizzaWithClassicDough(PizzaBuilder VeganPizzaBuilder){
+        VeganPizzaBuilder.setSize(PizzaSize.LARGE);
+        VeganPizzaBuilder.setDough(PizzaDough.CLASSIC_DOUGH);
+        return VeganPizzaBuilder.build();
     }
 
 }

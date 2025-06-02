@@ -5,30 +5,23 @@ import level1.builders.HawaiianPizzaBuilder;
 import level1.director.PizzaMaster;
 import level1.builders.PepperoniPizzaBuilder;
 import level1.model.Pizza;
-import level1.model.enums.PizzaDough;
-import level1.model.enums.PizzaSize;
 
 public class Main {
 
     public static void main(String[] args) {
 
         PizzaMaster pizzaiolo = new PizzaMaster();
+        HawaiianPizzaBuilder hawaiianPizzaBuilder = new HawaiianPizzaBuilder();
+        PepperoniPizzaBuilder pepperoniPizzaBuilder = new PepperoniPizzaBuilder();
+        VeganPizzaBuilder veganPizzaBuilder = new VeganPizzaBuilder();
 
-        Pizza smallPepperoniPizza = pizzaiolo.makePizza(
-                new PepperoniPizzaBuilder(), PizzaSize.SMALL, PizzaDough.THIN_DOUGH
-        );
+        Pizza smallHawaiianPizzaWithThinDough = pizzaiolo.makeSmallHawaiianPizzaWithThinDough(hawaiianPizzaBuilder);
+        Pizza mediumPepperoniPizzaWithThickDough = pizzaiolo.makeMediumPepperoniPizzaWithThickDough(pepperoniPizzaBuilder);
+        Pizza largeVeganPizzaWithClassicDough = pizzaiolo.makeLargeVeganPizzaWithClassicDough(veganPizzaBuilder);
         
-        Pizza mediumHawaiianPizza = pizzaiolo.makePizza(
-                new HawaiianPizzaBuilder(), PizzaSize.MEDIUM, PizzaDough.CLASSIC_DOUGH
-        );
-
-        Pizza largeVeganPizza = pizzaiolo.makePizza(
-                new VeganPizzaBuilder(), PizzaSize.LARGE, PizzaDough.THICK_DOUGH
-        );
-
-        System.out.println(smallPepperoniPizza);
-        System.out.println(mediumHawaiianPizza);
-        System.out.println(largeVeganPizza);
+        System.out.println(smallHawaiianPizzaWithThinDough);
+        System.out.println(mediumPepperoniPizzaWithThickDough);
+        System.out.println(largeVeganPizzaWithClassicDough);
 
     }
 
